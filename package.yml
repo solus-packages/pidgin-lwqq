@@ -1,0 +1,19 @@
+name       : pidgin-lwqq
+version    : 0.6.1
+release    : 1
+source     :
+    - https://github.com/xiehuc/pidgin-lwqq/archive/v0.6.1.tar.gz : 0e9c57567b62d94c105ea5749f23116cf67d51353f36d81e69be39b8ac9ccd6b
+license    : GPL-3.0
+component  : network.im
+summary    : This plugin provide the QQ Protocol support for Pidgin on Linux.
+description: |
+    This plugin provide the QQ Protocol support for Pidgin on Linux.
+builddeps  :
+    - pkgconfig(lwqq)
+    - pkgconfig(purple)
+setup      : |
+    %cmake .
+build      : |
+    %make
+install    : |
+    %make_install
